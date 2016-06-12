@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+
+  <servlet>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>com.example.web.Register</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/Register.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.example.web.Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Publish</servlet-name>
+    <servlet-class>com.example.web.Publish</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Publish</servlet-name>
+    <url-pattern>/Publish.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Select</servlet-name>
+    <servlet-class>com.example.web.Select</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Select</servlet-name>
+    <url-pattern>/Select.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Order</servlet-name>
+    <servlet-class>com.example.web.PlaceOrder</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Order</servlet-name>
+    <url-pattern>/Order.do</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>Search</servlet-name>
+    <servlet-class>com.example.web.Search</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Search</servlet-name>
+    <url-pattern>/Search.do</url-pattern>
+  </servlet-mapping>
+  
+  <session-config>
+    <session-timeout>10</session-timeout>
+  </session-config>
+  
+  <listener>
+    <listener-class>listener.MyHttpSessionListener</listener-class>
+  </listener>
+  
+  <jsp-config>
+        <taglib>
+        <taglib-uri>http://java.sun.com/jstl/fmt</taglib-uri>
+        <taglib-location>/WEB-INF/tlds/fmt.tld</taglib-location>
+    </taglib>
+    <taglib>
+        <taglib-uri>http://java.sun.com/jstl/core</taglib-uri>
+        <taglib-location>/WEB-INF/tlds/c.tld</taglib-location>
+    </taglib>
+    <taglib>
+        <taglib-uri>http://java.sun.com/jstl/sql</taglib-uri>
+        <taglib-location>/WEB-INF/tlds/sql.tld</taglib-location>
+    </taglib>
+    <taglib>
+        <taglib-uri>http://java.sun.com/jstl/x</taglib-uri>
+        <taglib-location>/WEB-INF/tlds/x.tld</taglib-location>
+    </taglib>
+    <taglib>
+        <taglib-uri>http://java.sun.com/jstl/functions</taglib-uri>
+        <taglib-location>/WEB-INF/tlds/fn.tld</taglib-location>
+    </taglib>
+  </jsp-config>
+ 
+</web-app>
